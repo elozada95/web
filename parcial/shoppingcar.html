@@ -15,9 +15,10 @@
     <script type="text/javascript" src="public/js/facebook.js"></script>
     <script type="text/javascript" src="https://www.paypalobjects.com/api/checkout.js"></script>
     <script type="text/javascript" src="public/js/paypal.js"></script>
+    <script type="text/javascript" src="public/js/youtube.js"></script>
 </head>
 
-<body onload="initialize()">
+<body onload="initialize(); getVideos();">
     <nav class="navbar navbar-default bg-primary">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -36,6 +37,9 @@
                     </li>
                     <li id="map">
                         <a href='maps'>Map</a>
+                    </li>
+                    <li id="videoTab">
+                        <a href='#' onclick="showpage(3)">Videos</a>
                     </li>
                 </ul>
             </div>
@@ -116,6 +120,9 @@
             <div id="paypal-button">
             </div>
         </div>
+    </div>
+    <div class="container" id="youtube">
+        
     </div>
 </body>
 
