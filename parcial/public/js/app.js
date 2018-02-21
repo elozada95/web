@@ -8,6 +8,7 @@ function showpage(idpage){
         
         $("#car").hide();
         $("#payment").hide();
+        $("#youtube").hide();
     }
     if (idpage==1)
     {
@@ -15,13 +16,14 @@ function showpage(idpage){
         $("#home").hide();
         $("#car").hide();
         $("#payment").hide();
+        $("#youtube").hide();
     }
     if (idpage==2)
     {
         $("#car").show();
         $("#customer").hide();
         $("#home").hide();
-        
+        $("#youtube").hide();
         $("#payment").hide();
     }
 
