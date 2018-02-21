@@ -1,0 +1,10 @@
+{
+ "name": "enrique",
+ "private": true,
+ "version": "1.0.0",
+ "description": "Docker container demo",
+ "author": "enriquin",
+ "dependencies": {
+  "express": "3.2.2"
+ }
+}
