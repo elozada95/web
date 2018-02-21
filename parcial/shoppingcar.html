@@ -16,6 +16,13 @@
     <script type="text/javascript" src="https://www.paypalobjects.com/api/checkout.js"></script>
     <script type="text/javascript" src="public/js/paypal.js"></script>
     <script type="text/javascript" src="public/js/youtube.js"></script>
+    <script type="text/javascript" src="public/js/linkedin.js"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/in.js">
+            api_key: 781d1gxof9zjud
+            onLoad: onLinkedInLoad
+            authorize: true
+        </script
+
 </head>
 
 <body onload="initialize(); getVideos();">
@@ -48,6 +55,7 @@
 
     <div class="container" id="home">
         <fb:login-button scope="public_profile,email" onlogin="checkLoginState(); showpage(1)">
+        <script type="in/Login"></script>
         </fb:login-button>
     </div>
 
