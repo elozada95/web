@@ -56,8 +56,8 @@
         
         function initMap() {
             
-            lat= 19.01826447750003;
-            lng = -98.24133396148682;
+            lat= 19.0318780;
+            lng = -98.2326091;
             
           
             mapOptions = {
@@ -69,7 +69,7 @@
             map = new google.maps.Map(document.getElementById("map_canvas"),
                 mapOptions);
             
-            google.maps.event.addListener(map, 'click', function (event) {
+            /**google.maps.event.addListener(map, 'click', function (event) {
                 
                 lat =event.latLng.lat();
                 lng=event.latLng.lng();
@@ -79,7 +79,7 @@
                 
                 map.clearMarkers();
                 drawMarker();
-            });
+            });*/
 
             drawMarker();
 
@@ -91,11 +91,11 @@
             
             var infowindow = new google.maps.InfoWindow();
             var marker, i; 
-            var nombre = document.getElementById("pmsg").value;
-            var message = "Tec de Mty";
+            var nombre = "Empresa";
+            var message = "Empresa";
           
-               var pinColor = document.getElementById("color").value.substring(1);
-		var charVal = document.getElementById("pcharacter").value.charAt(0);
+            var pinColor = "F00000";
+		var charVal = '';
                 var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld= "+ charVal  +" |" + pinColor,
                         new google.maps.Size(21, 34),
                         new google.maps.Point(0, 0),
@@ -126,8 +126,9 @@
 
         var geocoder = new google.maps.Geocoder;
         
-        var mylat = document.getElementById('lat').value;
-        var mylng = document.getElementById('lng').value;
+        var mylat = 19.0318780;
+            
+        var mylng = -98.2326091;
 
         var latlng = {lat: parseFloat(mylat), lng: parseFloat(mylng)};
   geocoder.geocode({'location': latlng}, function(results, status) {
@@ -150,8 +151,8 @@
     {
        
 
-        var lat = 19.0433;
-        var lng = -98.2019;
+        var lat = 19.0318780;
+        var lng = -98.2326091;
         var apiKey = "2af72ef62258728d72777bef612f2a3e";
 
       $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + 
@@ -187,33 +188,32 @@
    
        <table border="0">
             <tr>
-                <td class='colorBlue'>Google</td>
-                <td class='colorRed'>Maps</td>
-                <td class='colorYellow'><b>Demo </b></td>
+                Nuestra ubicacion
                 
             </tr>
         </table>
      
     <div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-3" style="background-color:white;">
+		<!--<div class="col-sm-3" style="background-color:white;">
       			LAT: <input name ="" id="lat" type="text" size="10"/>
 		</div>
 		<div class="col-sm-3" style="background-color:white;">
                         LNG: <input name ="" id="lng" type="text" size="10"/>
-                </div>
+        </div>-->
 		<div> <input type="button" value="Obtener Direccion" onclick="obtenerDireccion()"/></div>
                 <div> <input type="button" value="Obtener Clima" onclick="obtenerClima()"/></div>
+                <div> <a href='shoppingcar.html'>Volver</a></div>
 
-                <div class="col-sm-3" style="background-color:white;">
-                        Color: <input type="color" id="color">
+                <!--<div class="col-sm-3" style="background-color:white;">
+                        <input type="color" id="color" readonly/>
                 </div>
                 <div class="col-sm-3" style="background-color:white;">
-                        Char: <input type="text" id="pcharacter" value="x"/>
-                </div>
-                <div class="col-sm-3" style="background-color:white;">
-                        Msg: <input id="pmsg" type="text" value="Mensaje"/>
-                </div>
+                        <input type="text" id="pcharacter" value="x" readonly/>
+                </div>-->
+                <!--<div class="col-sm-3" style="background-color:white;">
+                        <input id="pmsg" type="text" value="Empresa" readonly/>
+                </div>-->
                 <div class="col-sm-3" style="background-color:white;">
             
                 </div>
