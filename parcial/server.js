@@ -11,6 +11,10 @@ app.get('/', function(req, res){
 	res.sendFile(path.join(__dirname + '/shoppingcar.html'));
 });
 
+app.get('/maps', function(req, res){
+	res.sendFile(path.join(__dirname + '/maps.html'));
+});
+
 app.listen(app.get("port"), function(){
 	console.log("listening on port " + app.get("port"));
 });
